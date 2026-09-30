@@ -46,18 +46,22 @@ document.querySelectorAll('[data-faq]').forEach(function (btn) {
   });
 });
 
-document.querySelectorAll('[data-chantier]').forEach(function (card) {
-  var buttons = card.querySelectorAll('.chantier-toggle button');
-  var images = card.querySelectorAll('.chantier-media img');
-  var tag = card.querySelector('.chantier-tag');
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var state = btn.getAttribute('data-show');
-      buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
-      images.forEach(function (img) {
-        img.classList.toggle('is-active', img.getAttribute('data-state') === state);
-      });
-      tag.textContent = state === 'avant' ? 'Avant' : 'Après';
+var chantiersTrack = document.querySelector('.chantiers-track');
+if (chantiersTrack) {
+  var prevArrow = document.querySelector('.arrow-prev');
+  var nextArrow = document.querySelector('.arrow-next');
+  var scrollStep = function () {
+    var slide = chantiersTrack.querySelector('.chantier-slide');
+    return slide ? slide.getBoundingClientRect().width + 24 : 300;
+  };
+  if (prevArrow) {
+    prevArrow.addEventListener('click', function () {
+      chantiersTrack.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
     });
-  });
-});
+  }
+  if (nextArrow) {
+    nextArrow.addEventListener('click', function () {
+      chantiersTrack.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+    });
+  }
+}

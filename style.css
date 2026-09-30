@@ -358,40 +358,37 @@ section[data-tone="light"] { background: var(--gray-light); }
 .stat-row .stat strong { display: block; font-size: 26px; font-weight: 900; color: var(--maroon); }
 .stat-row .stat span { font-size: 13px; color: #555; font-weight: 600; }
 
-/* ---------- EQUIPE ---------- */
-.team-grid {
+/* ---------- GARANTIES ---------- */
+.garanties-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-.team-card { text-align: center; }
-.team-media {
-  position: relative;
-  overflow: hidden;
+.garantie-card {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
   border-radius: var(--radius-m);
-  aspect-ratio: 3/4;
-  transition: transform .3s ease, box-shadow .3s ease;
+  padding: 30px 26px;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.team-media img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: grayscale(60%);
-  transition: transform .5s ease, filter .4s ease;
+.garantie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.1);
+  border-color: var(--yellow);
 }
-.team-card:hover .team-media { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,.16); }
-.team-card:hover .team-media img { transform: scale(1.08); filter: grayscale(0%); }
-.team-overlay {
-  position: absolute;
-  inset: auto 0 0 0;
-  background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
-  padding: 30px 18px 16px;
-  transform: translateY(100%);
-  transition: transform .35s ease;
+.garantie-icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  transition: transform .25s ease;
 }
-.team-card:hover .team-overlay { transform: translateY(0); }
-.team-overlay p { margin: 0; color: #fff; font-size: 13px; line-height: 1.5; }
-.team-info { margin-top: 16px; }
-.team-info h3 { font-size: 16px; text-transform: none; margin: 0 0 4px; }
-.team-info span { font-size: 13px; color: var(--maroon); font-weight: 700; }
+.garantie-card:hover .garantie-icon { transform: scale(1.1) rotate(-6deg); }
+.garantie-card h3 { font-size: 16px; text-transform: none; margin: 0 0 8px; }
+.garantie-card p { margin: 0; color: #555; font-size: 14px; }
 
 /* ---------- PRESTATIONS ---------- */
 .services-grid {
@@ -425,56 +422,58 @@ section[data-tone="light"] { background: var(--gray-light); }
 .service-card h3 { font-size: 17px; margin-bottom: 8px; text-transform: none; }
 .service-card p { margin: 0; color: #bdbdbd; font-size: 14px; }
 
-/* ---------- CHANTIERS ---------- */
-.chantiers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* ---------- CHANTIERS (carousel) ---------- */
+.chantiers-carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-.chantier-card {
+.chantiers-track {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+.chantiers-track::-webkit-scrollbar { display: none; }
+.chantier-slide {
+  flex: 0 0 calc(33.333% - 16px);
+  scroll-snap-align: start;
   border-radius: var(--radius-m);
   overflow: hidden;
   border: 1px solid var(--gray-border);
   transition: box-shadow .25s ease, transform .25s ease;
 }
-.chantier-card:hover {
+.chantier-slide:hover {
   box-shadow: 0 16px 32px rgba(0,0,0,.12);
   transform: translateY(-4px);
 }
-.chantier-media { position: relative; aspect-ratio: 4/3; overflow: hidden; }
-.chantier-media img {
-  position: absolute; inset: 0;
+.chantier-slide-media { aspect-ratio: 4/3; overflow: hidden; }
+.chantier-slide-media img {
   width: 100%; height: 100%; object-fit: cover;
-  opacity: 0;
-  transition: opacity .35s ease, transform .5s ease;
+  transition: transform .5s ease;
 }
-.chantier-card:hover .chantier-media img.is-active { transform: scale(1.06); }
-.chantier-media img.is-active { opacity: 1; }
-.chantier-tag {
-  position: absolute; top: 12px; left: 12px;
-  background: var(--yellow); color: var(--black);
-  font-size: 11px; font-weight: 900; letter-spacing: 0.06em;
-  padding: 5px 10px; border-radius: 999px; text-transform: uppercase;
-  z-index: 2;
+.chantier-slide:hover .chantier-slide-media img { transform: scale(1.06); }
+.chantier-slide-body { padding: 16px 18px 20px; }
+.chantier-slide-body h3 { font-size: 15px; text-transform: none; margin: 0 0 4px; }
+.chantier-slide-body p { margin: 0; font-size: 13px; color: #666; }
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-border);
+  background: var(--white);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
-.chantier-toggle {
-  display: flex;
-}
-.chantier-toggle button {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  background: var(--gray-light);
-  font-weight: 800;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #777;
-}
-.chantier-toggle button.is-active { background: var(--black); color: var(--white); }
-.chantier-body { padding: 16px 18px 20px; }
-.chantier-body h3 { font-size: 15px; text-transform: none; margin: 0 0 4px; }
-.chantier-body p { margin: 0; font-size: 13px; color: #666; }
+.carousel-arrow:hover { background: var(--yellow); border-color: var(--yellow); }
 .caption-note {
   text-align: center;
   font-size: 12.5px;
@@ -762,8 +761,8 @@ nav.primary a:nth-child(7) { animation-delay: .4s; }
   .quote-card { flex-direction: column; align-items: flex-start; }
   .presentation-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .chantiers-grid { grid-template-columns: repeat(2, 1fr); }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .garanties-grid { grid-template-columns: repeat(2, 1fr); }
+  .chantier-slide { flex: 0 0 calc(50% - 12px); }
   .faq-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
@@ -806,7 +805,7 @@ nav.primary a:nth-child(7) { animation-delay: .4s; }
 }
 @media (max-width: 640px) {
   section { padding: 56px 0; }
-  .services-grid, .chantiers-grid, .reviews-grid, .team-grid { grid-template-columns: 1fr; }
+  .services-grid, .garanties-grid, .reviews-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero-inner .check-grid { display: none; }
   .presentation-media::before { display: none; }
@@ -842,7 +841,9 @@ nav.primary a:nth-child(7) { animation-delay: .4s; }
   .presentation-copy .feature-list { align-items: center; }
   .presentation-copy .feature-list li { justify-content: center; }
   .stat-row { justify-content: center; text-align: center; }
-  .chantier-body { text-align: center; }
+  .chantier-slide-body { text-align: center; }
+  .carousel-arrow { display: none; }
+  .chantier-slide { flex: 0 0 85%; }
 
   .hero-inner { text-align: center; }
   .hero-inner .lede { margin-left: auto; margin-right: auto; }
