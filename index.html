@@ -6,7 +6,7 @@
 <title>Artizan — Artisan Électricien</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
 <div class="topbar">
   <div class="container">
     <div class="topbar-info">
-      <span>📍 18 Rue de la Roquette, 75011 Paris</span>
+      <span>📍 25 Rue de la Fontaine, 94360 Bry-sur-Marne</span>
       <span>✉️ contact@artizan-electricite.fr</span>
       <span>🕐 Lun–Sam · 8h–19h</span>
     </div>
@@ -62,32 +62,42 @@
 
   <div class="hero-inner">
     <span class="eyebrow">Votre électricien de confiance</span>
-    <h1>Un électricien sérieux, rapide et disponible 7j/7</h1>
-    <p class="lede">Artizan intervient chez les particuliers et les professionnels pour tous vos travaux d'installation, de dépannage et de mise aux normes électriques — avec un travail soigné et un interlocuteur unique du premier appel à la fin du chantier.</p>
+    <h1>Électriciens de confiance à <span class="nowrap">Bry-sur-Marne</span> : rapides et agréés, disponibles 24h/24 et 7j/7</h1>
     <ul class="check-grid">
-      <li><span class="bolt">⚡</span> Agréé &amp; assuré</li>
-      <li><span class="bolt">⚡</span> Dépannage 24/7</li>
-      <li><span class="bolt">⚡</span> Devis gratuit</li>
-      <li><span class="bolt">⚡</span> Travaux aux normes</li>
+      <li><svg class="bolt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> Agréé &amp; assuré</li>
+      <li><svg class="bolt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> Dépannage 24/7</li>
+      <li><svg class="bolt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> Devis gratuit</li>
+      <li><svg class="bolt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg> Travaux aux normes</li>
     </ul>
     <div class="hero-ctas">
       <a class="btn btn-yellow" href="tel:0123456789">Appeler maintenant</a>
-      <a class="btn btn-outline" href="#contact">Demander un devis</a>
     </div>
   </div>
 
 </section>
 
-<div class="quote-wrap container">
+<div class="quote-wrap">
   <div class="quote-card">
-    <div class="quote-text">
-      <h3>Besoin d'une intervention rapide ?</h3>
-      <p>Appelez-nous directement, on décroche.</p>
-    </div>
-    <div class="quote-actions">
-      <a class="quote-phone" href="tel:0123456789">01 23 45 67 89</a>
-      <a class="btn btn-maroon" href="#contact">Être rappelé</a>
-    </div>
+    <h3 class="quote-title">Obtenez votre devis gratuit !</h3>
+    <form class="quote-form">
+      <label class="quote-field">
+        <input type="text" placeholder="Nom" required>
+        <span class="quote-field-icon">👤</span>
+      </label>
+      <label class="quote-field">
+        <input type="tel" placeholder="Téléphone" required>
+        <span class="quote-field-icon">📞</span>
+      </label>
+      <label class="quote-field">
+        <input type="email" placeholder="Email" required>
+        <span class="quote-field-icon">✉️</span>
+      </label>
+      <label class="quote-field">
+        <input type="text" placeholder="Votre besoin">
+        <span class="quote-field-icon">✏️</span>
+      </label>
+      <button type="submit" class="btn btn-yellow quote-submit">Envoyer</button>
+    </form>
   </div>
 </div>
 
@@ -205,80 +215,168 @@
   </div>
 </section>
 
-<section id="chantiers" data-align="left">
+<section id="chantiers" data-align="center">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Nos réalisations</span>
       <h2>Nos derniers chantiers</h2>
     </div>
-    <div class="chantiers-carousel-wrap reveal">
-      <button class="carousel-arrow arrow-prev" aria-label="Réalisation précédente">‹</button>
-      <div class="chantiers-track">
+  </div>
+  <div class="chantiers-marquee reveal">
+    <div class="chantiers-track">
 
-        <div class="chantier-slide">
-          <div class="chantier-slide-media">
-            <img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=700&q=80&fm=jpg&fit=crop" alt="Tableau électrique rénové">
-          </div>
-          <div class="chantier-slide-body">
-            <h3>Rénovation de tableau électrique</h3>
-            <p>Remplacement complet et mise aux normes NF C 15-100.</p>
-          </div>
+      <div class="chantier-slide">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=700&q=80&fm=jpg&fit=crop" alt="Tableau électrique rénové">
         </div>
-
-        <div class="chantier-slide">
-          <div class="chantier-slide-media">
-            <img src="https://images.unsplash.com/photo-1530240852689-f7a9c6d9f6c7?w=700&q=80&fm=jpg&fit=crop" alt="Installation électrique neuve">
-          </div>
-          <div class="chantier-slide-body">
-            <h3>Installation neuve</h3>
-            <p>Câblage complet et pose des équipements pour une extension de maison.</p>
-          </div>
+        <div class="chantier-slide-body">
+          <h3>Rénovation de tableau électrique</h3>
+          <p>Remplacement complet et mise aux normes NF C 15-100.</p>
         </div>
-
-        <div class="chantier-slide">
-          <div class="chantier-slide-media">
-            <img src="https://images.unsplash.com/photo-1667923006173-9e0d2251f608?w=700&q=80&fm=jpg&fit=crop" alt="Dépannage électrique terminé">
-          </div>
-          <div class="chantier-slide-body">
-            <h3>Dépannage &amp; remise en état</h3>
-            <p>Recherche de panne et remise en conformité d'une installation existante.</p>
-          </div>
-        </div>
-
-        <div class="chantier-slide">
-          <div class="chantier-slide-media">
-            <img src="https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=700&q=80&fm=jpg&fit=crop" alt="Câblage électrique refait">
-          </div>
-          <div class="chantier-slide-body">
-            <h3>Reprise de câblage</h3>
-            <p>Remise à niveau complète du câblage et sécurisation des circuits.</p>
-          </div>
-        </div>
-
-        <div class="chantier-slide">
-          <div class="chantier-slide-media">
-            <img src="https://images.unsplash.com/photo-1553873002-785d775854c9?w=700&q=80&fm=jpg&fit=crop" alt="Contrôle électrique conforme">
-          </div>
-          <div class="chantier-slide-body">
-            <h3>Mise aux normes complète</h3>
-            <p>Contrôle et mise en conformité NF C 15-100 avant vente immobilière.</p>
-          </div>
-        </div>
-
-        <div class="chantier-slide">
-          <div class="chantier-slide-media">
-            <img src="https://images.unsplash.com/photo-1635335874521-7987db781153?w=700&q=80&fm=jpg&fit=crop" alt="Boîtier de commande rénové">
-          </div>
-          <div class="chantier-slide-body">
-            <h3>Rénovation de boîtier de commande</h3>
-            <p>Remplacement du boîtier et raccordement propre de l'ensemble des circuits.</p>
-          </div>
-        </div>
-
       </div>
-      <button class="carousel-arrow arrow-next" aria-label="Réalisation suivante">›</button>
+
+      <div class="chantier-slide">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1530240852689-f7a9c6d9f6c7?w=700&q=80&fm=jpg&fit=crop" alt="Installation électrique neuve">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Installation neuve</h3>
+          <p>Câblage complet et pose des équipements pour une extension de maison.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1667923006173-9e0d2251f608?w=700&q=80&fm=jpg&fit=crop" alt="Dépannage électrique terminé">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Dépannage &amp; remise en état</h3>
+          <p>Recherche de panne et remise en conformité d'une installation existante.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=700&q=80&fm=jpg&fit=crop" alt="Câblage électrique refait">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Reprise de câblage</h3>
+          <p>Remise à niveau complète du câblage et sécurisation des circuits.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1553873002-785d775854c9?w=700&q=80&fm=jpg&fit=crop" alt="Contrôle électrique conforme">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Mise aux normes complète</h3>
+          <p>Contrôle et mise en conformité NF C 15-100 avant vente immobilière.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1635335874521-7987db781153?w=700&q=80&fm=jpg&fit=crop" alt="Boîtier de commande rénové">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Rénovation de boîtier de commande</h3>
+          <p>Remplacement du boîtier et raccordement propre de l'ensemble des circuits.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide" aria-hidden="true">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=700&q=80&fm=jpg&fit=crop" alt="">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Rénovation de tableau électrique</h3>
+          <p>Remplacement complet et mise aux normes NF C 15-100.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide" aria-hidden="true">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1530240852689-f7a9c6d9f6c7?w=700&q=80&fm=jpg&fit=crop" alt="">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Installation neuve</h3>
+          <p>Câblage complet et pose des équipements pour une extension de maison.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide" aria-hidden="true">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1667923006173-9e0d2251f608?w=700&q=80&fm=jpg&fit=crop" alt="">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Dépannage &amp; remise en état</h3>
+          <p>Recherche de panne et remise en conformité d'une installation existante.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide" aria-hidden="true">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1601462904263-f2fa0c851cb9?w=700&q=80&fm=jpg&fit=crop" alt="">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Reprise de câblage</h3>
+          <p>Remise à niveau complète du câblage et sécurisation des circuits.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide" aria-hidden="true">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1553873002-785d775854c9?w=700&q=80&fm=jpg&fit=crop" alt="">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Mise aux normes complète</h3>
+          <p>Contrôle et mise en conformité NF C 15-100 avant vente immobilière.</p>
+        </div>
+      </div>
+
+      <div class="chantier-slide" aria-hidden="true">
+        <div class="chantier-slide-media">
+          <img src="https://images.unsplash.com/photo-1635335874521-7987db781153?w=700&q=80&fm=jpg&fit=crop" alt="">
+        </div>
+        <div class="chantier-slide-body">
+          <h3>Rénovation de boîtier de commande</h3>
+          <p>Remplacement du boîtier et raccordement propre de l'ensemble des circuits.</p>
+        </div>
+      </div>
+
     </div>
+  </div>
+  <div class="container">
     <p class="caption-note">Photos d'illustration — vos propres chantiers remplaceront ces visuels avant la mise en ligne.</p>
+  </div>
+</section>
+
+<section id="zone" data-tone="dark" data-align="center">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Zone d'intervention</span>
+      <h2>Un électricien proche de chez vous</h2>
+      <p>Implantés à Bry-sur-Marne, nous couvrons l'ensemble du Val-de-Marne et les communes voisines d'Île-de-France. Cette proximité nous permet de nous déplacer rapidement, que ce soit pour une urgence le jour même ou un chantier planifié à l'avance.</p>
+    </div>
+    <div class="zone-grid reveal">
+      <div class="zone-item">
+        <div class="zone-icon">🏠</div>
+        <span>Siège : Bry-sur-Marne</span>
+      </div>
+      <div class="zone-item">
+        <div class="zone-icon">📍</div>
+        <span>Val-de-Marne (94)</span>
+      </div>
+      <div class="zone-item">
+        <div class="zone-icon">🗺️</div>
+        <span>Île-de-France</span>
+      </div>
+      <div class="zone-item">
+        <div class="zone-icon">⏱️</div>
+        <span>Intervention sous 48h</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -351,7 +449,7 @@
     <div class="reviews-grid">
       <div class="review-card reveal">
         <div class="review-head">
-          <div class="avatar">MD</div>
+          <div class="avatar"><img src="https://i.pravatar.cc/80?img=12" alt="Marc D."></div>
           <div>
             <strong>Marc D.</strong>
             <div class="stars">★★★★★</div>
@@ -361,7 +459,7 @@
       </div>
       <div class="review-card reveal">
         <div class="review-head">
-          <div class="avatar">SL</div>
+          <div class="avatar"><img src="https://i.pravatar.cc/80?img=47" alt="Sophie L."></div>
           <div>
             <strong>Sophie L.</strong>
             <div class="stars">★★★★★</div>
@@ -371,7 +469,7 @@
       </div>
       <div class="review-card reveal">
         <div class="review-head">
-          <div class="avatar">JB</div>
+          <div class="avatar"><img src="https://i.pravatar.cc/80?img=33" alt="Julien B."></div>
           <div>
             <strong>Julien B.</strong>
             <div class="stars">★★★★★</div>
@@ -419,7 +517,7 @@
           <div class="icon">📍</div>
           <div>
             <h4>Zone d'intervention</h4>
-            <p>18 Rue de la Roquette, 75011 Paris — intervention dans tout Paris et la petite couronne</p>
+            <p>25 Rue de la Fontaine, 94360 Bry-sur-Marne — intervention dans tout le Val-de-Marne</p>
           </div>
         </div>
         <div class="item">
@@ -458,7 +556,7 @@
       <div class="reveal">
         <h4>Contact</h4>
         <ul>
-          <li>18 Rue de la Roquette, 75011 Paris</li>
+          <li>25 Rue de la Fontaine, 94360 Bry-sur-Marne</li>
           <li>01 23 45 67 89</li>
           <li>contact@artizan-electricite.fr</li>
         </ul>
@@ -474,7 +572,7 @@
         </ul>
       </div>
     </div>
-    <p class="legal-note">Mentions légales — [Nom de l'entrepreneur individuel], [forme juridique], SIRET [à compléter], siège social 18 Rue de la Roquette, 75011 Paris. Assurance décennale et RC Pro souscrites auprès de [assureur à compléter].</p>
+    <p class="legal-note">Mentions légales — [Nom de l'entrepreneur individuel], [forme juridique], SIRET [à compléter], siège social 25 Rue de la Fontaine, 94360 Bry-sur-Marne. Assurance décennale et RC Pro souscrites auprès de [assureur à compléter].</p>
     <div class="footer-bottom">
       <span>© 2026 Virtuos Studio — Tous droits réservés</span>
       <a href="#">Mentions légales</a>

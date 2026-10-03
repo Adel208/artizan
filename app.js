@@ -45,23 +45,3 @@ document.querySelectorAll('[data-faq]').forEach(function (btn) {
     }
   });
 });
-
-var chantiersTrack = document.querySelector('.chantiers-track');
-if (chantiersTrack) {
-  var prevArrow = document.querySelector('.arrow-prev');
-  var nextArrow = document.querySelector('.arrow-next');
-  var scrollStep = function () {
-    var slide = chantiersTrack.querySelector('.chantier-slide');
-    return slide ? slide.getBoundingClientRect().width + 24 : 300;
-  };
-  if (prevArrow) {
-    prevArrow.addEventListener('click', function () {
-      chantiersTrack.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
-    });
-  }
-  if (nextArrow) {
-    nextArrow.addEventListener('click', function () {
-      chantiersTrack.scrollBy({ left: scrollStep(), behavior: 'smooth' });
-    });
-  }
-}
